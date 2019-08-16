@@ -1,0 +1,128 @@
+<!DOCTYPE HTML>
+<HTML>
+<meta charset="utf-8">
+
+<TITLE> HELP LUKE ESCAPE</TITLE>
+<STYLE>
+#canvas{
+outline: 1px solid #F000
+visibility: visible;
+HEIGHT ="500";
+WIDTH ="700"
+z-index:0
+}
+
+Body{background-image:url("swamp.png");
+z-index:1
+
+
+
+
+
+{
+   canvas, img {  margin:1em auto; border:1px solid black; }
+}
+</STYLE>
+</HEAD>
+<BODY>
+
+
+<CANVAS ID="canvas" HEIGHT ="500" WIDTH ="700" ></CANVAS>
+
+
+
+
+
+<SCRIPT>
+
+
+
+var canvas = document.querySelector('#canvas');
+var context = canvas.getContext('2d');
+
+var xPos =600;
+var yPos =500;
+
+
+
+
+
+
+
+
+function move(e){
+
+
+//alert(e.keyCode);
+
+//}
+//if(e.keyCode == 39){
+//xPos += 5;
+//}
+//if(e.keyCode == 37){
+//xPos -= 5;
+//}
+
+if(e.keyCode == 77){
+yPos -= 5;
+}if(e.keyCode == 87){
+yPos += 5;
+}if(e.keyCode == 65){
+yPos += 5;
+}if(e.keyCode == 83){
+yPos += 5;
+}
+if(e.keyCode == 68){
+yPos += 5;
+}
+if(e.keyCode == 74){
+yPos += 5;
+}
+//if(e.keyCode == 40){
+//yPos += 5;
+//}
+
+if (yPos == 200) {
+window.open("Other mans game(hack).html","_self");
+}
+
+canvas.width=canvas.width;
+// the triangle
+context.beginPath();
+context.moveTo(xPos+25, yPos+50);
+context.lineTo(xPos+25, yPos+75);
+context.lineTo(xPos+75, yPos+75);
+context.closePath();
+ 
+// the outline
+context.lineWidth = 10;
+context.strokeStyle = '#000000';
+context.stroke();
+ 
+// the fill color
+context.fillStyle = "#AAAAAA";
+context.fill();
+}
+
+
+
+//restarts game
+
+function restart(){
+
+var r = confirm("Do you want to restart?");
+if (r == true && yPos <= 200 ){
+window.open("Attempt 10.html","_self")
+}
+else {window.close;}
+}
+
+
+setInterval(restart, 30000);
+
+
+document.onkeydown = move;
+document.onkeyup = dmove;
+</SCRIPT>
+</BODY>
+</HTML>	

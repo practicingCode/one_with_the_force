@@ -1,0 +1,166 @@
+body {
+  width: 100%;
+  height: 100%;
+  background: #000;
+  overflow: hidden;
+    background: url(showcase/stars.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+table, th, td {
+    text-align: center;
+    border: 1px solid #feda4a;
+}
+
+.logo {
+    width: 100%;
+    height: 100%;
+}
+.mute {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 20pt;
+    width: 20pt;
+    color: white;
+    background: white;
+    z-index: 999999;
+}
+
+.unmute {
+    position: fixed;
+    bottom: 20pt;
+    left: 0;
+    height: 20pt;
+    width: 20pt;
+    color: white;
+    background: white;
+    z-index: 999999;
+}
+
+.lnk {
+    color: #09f4fb;
+    text-decoration: none;
+}
+
+.lnk:hover {
+    text-decoration: underline;
+}
+
+.fade {
+  position: relative;
+  width: 100%;
+  min-height: 60vh;
+  top: -25px;
+  background-image: linear-gradient(0deg, transparent, black 80%);
+  z-index: 1;
+}
+
+.star-wars {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: 800px;
+  color: #feda4a;
+  font-family: 'Pathway Gothic One', sans-serif;
+  font-size: 500%;
+  font-weight: 600;
+  letter-spacing: 6px;
+  line-height: 150%;
+  perspective: 400px;
+  text-align: justify;
+}
+
+.colorchange {
+    animation: colorchange 30s linear;
+    animation-delay: 10s;
+}
+
+.crawl {
+  position: relative;
+  top: 99999px;
+  transform-origin: 50% 100%;
+  animation: crawl 135s linear;
+  animation-play-state: running;
+}
+
+.crawl > .title {
+  font-size: 90%;
+  text-align: center;
+}
+
+.crawl > .title h1 {
+  margin: 0 0 100px;
+  text-transform: uppercase;
+}
+
+@keyframes colorchange {
+    5% {
+       color: antiquewhite;
+    }
+    
+    10% {
+        color: aqua;
+    }
+    
+    15% {
+        color: blue;
+    }
+    
+    20% {
+        color: chocolate;
+    }
+    
+    25% {
+        color: cornflowerblue;
+    }
+    
+    30% {
+        color: darkgreen;
+    }
+    
+    35% {
+        color: brown;
+    }
+    
+    40% {
+        color: darkorange;
+    }
+    
+    45% {
+        color: darkred;
+    }
+    
+    50% {
+        color: cadetblue;
+    }
+    
+    55% {
+        color: deeppink;
+    }
+    
+    60% {
+        color: dimgrey;
+    }
+    
+    65% {
+        color: fuchsia;
+    }
+    
+    100% {
+        color: black;
+    }
+}
+
+@keyframes crawl {
+    0% {
+    top: -100px;
+    transform: rotateX(20deg)  translateZ(0);
+  }
+    100% { 
+    top: -15900px;
+    transform: rotateX(24deg) translateZ(-5700px);
+  }
+}
